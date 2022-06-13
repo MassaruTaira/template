@@ -30,8 +30,8 @@ type Profile = {
 export default function FormItem() {
   const {register, handleSubmit, getValues, setValue, formState:{errors}} = useForm<Profile>()
 
-  const onSubmit = handleSubmit((data) => {
-    alert(JSON.stringify(data))
+  const onSubmit = handleSubmit((form) => {
+    alert(JSON.stringify(form))
   })
 
   return (
@@ -62,7 +62,7 @@ export default function FormItem() {
           {
             errors.aura && <div className="error">Enter only number 1 ~ 5</div>
           }
-      <button type="button" onClick={() => {
+      {/* <button type="button" onClick={() => {
         //const nick = getValues("nickname")
         var nick:string = getValues("nickname")
         const str = getValues("strength")
@@ -70,13 +70,18 @@ export default function FormItem() {
         const agi = getValues("agility")
         const res = getValues("resistance")
         const au = getValues("aura")
-      }}>
+        //melhorar*
+      }}> */}
+      <button type="button" onClick={onSubmit}>
         Submit
       </button>
-      <Input {...register('nicknamelabel',{ required: true })} placeholder="Nick Name" id="nicknamelabel" name="nicknamelabel" type="text"/>
+      {/* <Input {...register('nicknamelabel',{ required: true })} placeholder="Nick Name" id="nicknamelabel" name="nicknamelabel" type="text"/>
       {
           errors.nicknamelabel && <div className="error">Enter your nick name</div>
-      }
+      } */}
+      <div>
+        {getValues('nickname')}
+      </div>
       <button type="button" onClick={() => {
         setValue("nicknamelabel", "Nick")
       }}>

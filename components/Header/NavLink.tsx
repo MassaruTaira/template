@@ -11,13 +11,14 @@ interface Props {
 export default function NavLink({ title, path, includes = false }: Props) {
   const router = useRouter();
 
-  function verifyIsActive() {
+  function verifyIfIsActive() {
     if(includes) {
       return router.pathname.includes(path)
     }
+    return router.pathname === path;
   }
 
-  const isActive = router.pathname === path;
+  const isActive = verifyIfIsActive();
 
   return (
     <NavLinkContainer isActive={isActive}>
