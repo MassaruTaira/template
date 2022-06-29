@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
-import Header from '../../../components/Header';
-import BannerProject from '../../../components/BannerProject';
+import Header from '../../components/Header';
+import BannerProject from '../../components/BannerProject';
 import { ProjectContainer } from '../../styles/ProjectStyles';
 
 export default function Project() {

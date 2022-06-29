@@ -1,5 +1,5 @@
-import Header from '../../../components/Header';
-import ProjectPages from '../../../components/ProjectPages';
+import Header from '../../components/Header';
+import ProjectPages from '../../components/ProjectPages';
 import { ProjectsContainer } from '../../styles/ProjectsStyles';
 
 export default function Projects() {
