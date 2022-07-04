@@ -53,4 +53,9 @@ export const Container = styled.section`
   gap: 0.8rem;
   align-items: center;
   justify-content: right;
+
+  h2{
+    color: ${({ theme }) => theme.secondary};
+    justify-content: right;
+  }
 `;

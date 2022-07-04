@@ -5,7 +5,7 @@ import { Container, TextContainer, InfosContainer, CodeItem } from './styles';
 const HomeHero: React.FC = () => {
   return (
     <Container>
-      <img src="../../src/assets/pessoa.webp" alt="/" />
+      <img src="../public/assets/RobenCookie.jpg" />
       <div>
         <TextContainer>
           <h1>Hello</h1>

@@ -46,5 +46,8 @@ export const FormContainer = styled.form`
       font-size: 1rem;
     }
   }
+  span.modal {
+    margin-top: 5rem;
+  }
 `;
 
